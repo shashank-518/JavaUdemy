@@ -30,5 +30,23 @@ public class BaseballTeam {
         return ((TotalLoss*2) + TotalTies +1 );
     }
 
+    public String setScore(int ourScore , int theirScore){
+        String message = "Lost to";
+
+        if(ourScore > theirScore){
+            message = "beat";
+            TotalWins++;
+        } else if(ourScore == theirScore) {
+message = "tied";
+TotalTies++;
+        }
+        else{
+            TotalLoss++;
+        }
+
+        return  message;
+
+    }
+
 
 }
