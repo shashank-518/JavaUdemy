@@ -1,3 +1,5 @@
+package dev.lpa;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +15,19 @@ public class BaseballTeam {
     }
 
     public void AddPlayers(BaseBallPlayers Players){
+        if(!(TeamMembers.contains(Players))){
+            TeamMembers.add(Players);
+        }
+    }
 
+    public void TeamMembers(){
+
+        System.out.println(TeamName + "Roaster");
+        System.out.println(TeamMembers);
+    }
+
+    public int rankings(){
+        return ((TotalLoss*2) + TotalTies +1 );
     }
 
 

@@ -1,3 +1,5 @@
+package dev.lpa;
+
 record BaseBallPlayers(String name , String position){}
 
 
