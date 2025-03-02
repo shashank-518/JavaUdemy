@@ -10,3 +10,5 @@ public interface MyInter {
 
 //to use lamda expression we should have an interface with only one single abstract method
 // It is basically arrow function in javaScript
+
+//Create Separate class and implement the method.
