@@ -2,6 +2,14 @@ package ArrayList;
 
 import java.util.*;
 
+class CompareLength implements Comparator<String>{
+
+    @Override
+    public int compare(String o1, String o2) {
+        return o1.length() - o2.length();
+    }
+}
+
 public class listexample {
     public static void main(String[] args) {
 //        List<Integer> list = new ArrayList<>();
@@ -51,14 +59,25 @@ public class listexample {
         l1.add(34);
         l1.add(4);
 
-        List<Integer> list2 = List.of(5, 6, 7, 8, 9);
+        List<String> list2 = List.of("Apple" , "Mangoes", "Date");
+
+        List<String> l3 = new ArrayList<>(list2);
+//        l3.add("apple");
+//        l3.add("mangoes");
+//        l3.add("date");
+//
+        l3.sort(new CompareLength());
+
+        System.out.println(l3);
 
 
 //        Collections.sort(l1);
 
-        l1.sort(null);
+//        l1.sort(new compareDecrement());
+//
+//        System.out.println(l1);
 
-        System.out.println(l1);
+
 
 
     }
