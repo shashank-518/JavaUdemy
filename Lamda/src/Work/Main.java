@@ -4,9 +4,18 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
 
-        MyInterImpl myInt = new MyInterImpl();
+//        MyInterImpl myInt = new MyInterImpl();
+//
+//        myInt.sayHello();
 
-        myInt.sayHello();
+        MyInter i = new MyInter() {
+            @Override
+            public void sayHello() {
+                System.out.println("My First Anonymous Class");
+            }
+        };
+
+        i.sayHello();
 
     }
 }
