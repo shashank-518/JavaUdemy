@@ -26,5 +26,16 @@ public class Main {
 
         MyInter i2 = ()-> System.out.println("This is also perfect Way to create Lambda expression");
 
+
+        Addition add = (int a,int b) ->{
+          return a + b;
+        };
+
+        int sum = add.addNumber(5,6);
+        System.out.println(sum);
+
+        Multiply m = (a,b)-> a*b;
+        System.out.println(m.multi(5,6));
+
     }
 }
