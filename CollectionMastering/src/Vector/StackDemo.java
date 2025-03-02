@@ -1,5 +1,7 @@
 package Vector;
 
+import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Stack;
 
 public class StackDemo {
@@ -18,6 +20,32 @@ public class StackDemo {
         int peek = s1.peek();
         System.out.println(peek);
         System.out.println(s1);
+
+        System.out.println(s1.contains(3));
+        System.out.println(s1.isEmpty());
+
+
+//        LinkedList as Stack
+
+        LinkedList<Integer> ll = new LinkedList<>();
+        ll.add(1);
+        ll.add(2);
+        ll.addFirst(2);
+        ll.getLast();
+        ll.getFirst();
+
+
+
+//        ArrayList as Stack
+
+        ArrayList<Integer> l2 = new ArrayList<>();
+        l2.add(34);
+        l2.add(56);
+        l2.addFirst(56);
+        l2.getLast();
+        l2.get(l2.size()-1);
+
+
 
 
 
