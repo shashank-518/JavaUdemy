@@ -1,8 +1,6 @@
 package ArrayList;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class listexample {
     public static void main(String[] args) {
@@ -26,16 +24,41 @@ public class listexample {
 //        }
 
 
-        List<String> l1 = Arrays.asList("Monday","Tuesday","Wednesday");
+//        List<String> l1 = Arrays.asList("Monday","Tuesday","Wednesday");
 //        l1.add("Thrusday"); this is wrong as we cannot add or delete
-
-        l1.set(2,"Thursday");
-        System.out.println(l1);
-
-        List<String> l2 = List.of("Shashank","Shashu","Shreyas");
+//
+//        l1.set(2,"Thursday");
+//        System.out.println(l1);
+//
+//        List<String> l2 = List.of("Shashank","Shashu","Shreyas");
 //        l2.set(2,"SHashu"); This is not possible
-        System.out.println(l2);
+//        System.out.println(l2);
 
+
+//        String[] fruits = {"Apple","mango","Banana"};
+//        List<String> list2 = Arrays.asList(fruits);
+//        System.out.println(list2.getClass().getName());
+//
+//        List <String> list3 = new ArrayList<>(list2);
+//        System.out.println(list3.getClass().getName());
+//        list3.add("Cherry");
+//        System.out.println(list3);
+
+
+        List <Integer> l1 = new ArrayList<>();
+        l1.add(1);
+        l1.add(20);
+        l1.add(34);
+        l1.add(4);
+
+        List<Integer> list2 = List.of(5, 6, 7, 8, 9);
+
+
+//        Collections.sort(l1);
+
+        l1.sort(null);
+
+        System.out.println(l1);
 
 
     }
