@@ -16,8 +16,7 @@ public class Main {
         )
         );
 
-        var compartor = new EmployeeComparator<>();
-        employee.sort(compartor);
+        employee.sort(new Employee.EmployeeComparator<>("yearsStarted").reversed());
 
         for(Employee e: employee){
             System.out.println(e);

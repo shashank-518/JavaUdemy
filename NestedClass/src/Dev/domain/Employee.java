@@ -1,6 +1,32 @@
 package Dev.domain;
 
+import java.util.Comparator;
+
 public class Employee {
+
+    public static class EmployeeComparator <T extends  Employee> implements Comparator<Employee> {
+
+        private String SortType;
+
+
+        public EmployeeComparator() {
+            this("name");
+        }
+
+        public EmployeeComparator(String sortType) {
+            this.SortType = sortType;
+        }
+
+        @Override
+        public int compare(Employee o1, Employee o2) {
+
+            if(SortType.equalsIgnoreCase("yearsStarted")){
+                return o1.yearsStarted - o2.yearsStarted;
+            }
+
+            return o1.name.compareTo(o2.name);
+        }
+    }
 
     private int EmployeeId;
 
