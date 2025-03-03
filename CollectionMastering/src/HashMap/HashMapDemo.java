@@ -49,3 +49,31 @@ public class HashMapDemo {
     }
 
 }
+
+
+/*
+
+HashMap has Four Components that is :
+1.Key
+2.Value
+3.Bucket -> Internal Array Which Will Store the Key Value Pair
+4.Hash Function -> Convert Key Into an Index for storage
+
+Hash Function is an algorithm that takes an input and returns a fixed size number of bytes known as hashcode / hash
+Characteristics:
+1.Deterministic :- Same Input will give Same Output.
+2. Fixed Output Size
+3. Efficient Computation : The Hash Function should compute the hash function quickly.
+
+How Data is Stored in hash Map??
+
+Step 1: Hashing the key:-
+The key is passed through the algorithm to generate the hash code .The hash code helps to determine the key value pair
+in the array
+
+Step 2:
+
+
+
+
+ */
