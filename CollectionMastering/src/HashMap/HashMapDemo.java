@@ -71,9 +71,13 @@ Step 1: Hashing the key:-
 The key is passed through the algorithm to generate the hash code .The hash code helps to determine the key value pair
 in the array
 
-Step 2:
+Step 2: Calculating the Index :-
+    int index = hashcode % arraySize;
+
+Step 3: Storing in the Bucket:-
 
 
+There are many changes made
 
 
  */

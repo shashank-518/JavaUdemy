@@ -22,6 +22,10 @@ public class CopyOnWriteArrayDemo {
 
         System.out.println("Updated Array List is " + CopyArray);
 
+        // Iterating using enhanced for loop
+//        for (Map.Entry<String, Integer> e : ht.entrySet())
+//            System.out.println(e.getKey() + " " + e.getValue());
+
     }
 
 }
