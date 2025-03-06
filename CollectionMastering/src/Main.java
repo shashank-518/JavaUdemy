@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-class Student{
+class Student implements Comparable<Student> {
     private String name;
 
     private double cgpa;
@@ -18,6 +18,19 @@ class Student{
     public double getCgpa() {
         return cgpa;
     }
+
+    @Override
+    public int compareTo(Student o) {
+        return Double.compare(o.getCgpa() , this.getCgpa());
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", cgpa=" + cgpa +
+                '}';
+    }
 }
 
 
@@ -30,11 +43,35 @@ public class Main {
         students.add(new Student("Aditya" , 9.4));
 
 
-        students.sort(((o1, o2) -> (int) (o2.getCgpa() - o1.getCgpa())));
+//        students.sort(null);  ------> This doesnt work because there is no natural ordering for Student
 
-        for(Student s : students){
-            System.out.println(s.getName() + "  " + s.getCgpa());
-        }
+//        List<Integer> Number = new ArrayList<>();
+//        Number.add(4);
+//        Number.add(34);
+//        Number.add(2);
+//        Number.add(1);
+//
+//        Number.sort(null);
+//
+//        System.out.println(Number);
+        students.sort(null);
+        System.out.println(students);
 
     }
 }
+
+/*
+
+
+    Comparable has a method called CompareTo where we will compare one attribute to this
+    Comparator has a method called Compare where there will be two parameters o1 and o2
+
+    when will we use both??
+
+    Comparable to find out natural Ordering using one of the fields
+    Comparator to sort based on user requirements
+
+
+
+
+ */
