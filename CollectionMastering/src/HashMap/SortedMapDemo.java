@@ -12,6 +12,8 @@ public class SortedMapDemo  {
         map.put("Mizba",98);
         map.put("Ramu",22);
         map.put("Vipul",25);
+        map.put(null , 34); // this will give null pointer exception
+
         System.out.println(map);
 
         System.out.println(map.firstKey());
