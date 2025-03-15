@@ -1,5 +1,7 @@
 package Java8;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.function.*;
 
 public class SupplierDemo {
@@ -43,6 +45,14 @@ public class SupplierDemo {
         BinaryOperator<Integer> addnum = (a,b) -> a+b;
 
         System.out.println(addnum.apply(10,70));
+
+
+        //Method Referencing -> calling a method without invoking
+
+        List<Integer> list = Arrays.asList(2,56,78,53);
+        //list.forEach(x-> System.out.println(x)); Instead of doing this we can do use method referencing
+
+        list.forEach(System.out::println);
 
 
 
