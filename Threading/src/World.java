@@ -1,3 +1,8 @@
+
+/*
+
+This is the way of writing a program by extending Thread class
+
 public class World extends Thread {
 
     @Override
@@ -7,5 +12,19 @@ public class World extends Thread {
             System.out.println("World");
         }
 
+    }
+}
+
+ */
+
+
+public class World implements Runnable {
+
+
+    @Override
+    public void run() {
+        for(;;){
+            System.out.println("World");
+        }
     }
 }
