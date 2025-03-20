@@ -20,3 +20,13 @@ public class Methodsdemo extends Thread {
     }
 
 }
+
+
+/*
+
+We can set Priority of any thread
+
+The min Priority is 1 and the max priority is 10 and the norm priority is 5
+
+
+ */
