@@ -2,21 +2,28 @@ package ThreadMethods;
 
 public class Methodsdemo extends Thread {
 
+    public Methodsdemo(String name) {
+        super(name);
+    }
+
     @Override
     public void run() {
-        try {
-            Thread.sleep(5000);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+        for (int i =0; i<5;i++){
+            System.out.println(Thread.currentThread().getName() + " is Running");
+            Thread.yield();
         }
     }
 
 
-    public static void main(String[] args) throws InterruptedException {
-        Methodsdemo t1 = new Methodsdemo();
+    public static void main(String[] args) {
+
+        Methodsdemo t1 = new Methodsdemo("t1");
+        Methodsdemo t2 = new Methodsdemo("t2");
+
         t1.start();
-        t1.join();
-        System.out.println("Hello");
+        t2.start();
+
+
     }
 
 }
