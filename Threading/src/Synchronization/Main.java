@@ -8,11 +8,7 @@ public class Main {
         Runnable task = new Runnable() {
             @Override
             public void run() {
-                try {
-                    sbi.withdraw(50);
-                } catch (InterruptedException e) {
-                    throw new RuntimeException(e);
-                }
+                sbi.withdraw(50);
             }
         };
 
