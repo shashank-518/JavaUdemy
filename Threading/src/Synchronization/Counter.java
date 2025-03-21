@@ -38,6 +38,16 @@ public class Counter {
     The section were we are using synchronized keyword is called critical condition.
 
 
+    When we use Synchronization we use Locks When one thread is using the shared resource it will have the lock so
+    another thread won't use. This term is called Locking
+
+    There are two types of lock
+    1. Intrinsic Lock -> automatically locks will applied
+    2. Explicit Lock -> advance locking system user will tell when to lock and unlock.
+
+
+
+
 
 
  */
