@@ -1,17 +1,48 @@
 package ThreadCommunication;
 
 
+import java.util.Date;
+
 class SharedResource{
 
     private int data;
 
     private boolean hasData;
 
-    public void produce(int data){
+    public synchronized void produce(int value){
+
+        while (hasData){
+            try{
+                wait();
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        }
+
+        data = value;
+        System.out.println("Produced " + data);
+        hasData = true;
+        notify();
+
+
+
+
 
     }
 
-    public int consume(){
+    public synchronized int consume(){
+        while (!hasData){
+            try{
+                wait();
+            }catch (InterruptedException e){
+                Thread.currentThread().interrupt();
+            }
+        }
+
+        hasData = false;
+        notify();
+        System.out.println("Produced " + data);
+        return data;
 
     }
 
@@ -29,7 +60,7 @@ class Producer implements Runnable{
     public void run() {
         for (int i =0;i<10;i++){
             resource.produce(i);
-            System.out.println("Produced " + i);
+
         }
     }
 }
@@ -47,10 +78,23 @@ class Consumer implements Runnable{
     public void run() {
         for (int i =0;i<10;i++){
             int value = resource.consume();
-            System.out.println("Produced " + value);
+
         }
     }
 }
 
 public class CommunicationDemo {
+
+    public static void main(String[] args) {
+        SharedResource resource = new SharedResource();
+
+        Thread ProducerThread = new Thread(new Producer(resource));
+        Thread ConsumerThread = new Thread(new Consumer(resource));
+
+
+        ProducerThread.start();
+        ConsumerThread.start();
+
+    }
+
 }
